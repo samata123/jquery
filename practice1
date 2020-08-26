@@ -1,0 +1,28 @@
+we need to use window.onload for the images to fetch the properties and document.ready can not fetch image properties.
+<html>
+<head>
+<title>Try jQuery Online</title>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+   $("#em").addClass("highlight");
+   $("#myid").addClass("highlight");
+   $("#em").click (function(){
+       alert("hiii");
+   })
+});
+
+</script>
+<style>
+.selected { 
+    color:red; 
+}
+.highlight { 
+    background:yellow; 
+}
+</style>
+</head>
+<body>
+<input type="button" id="em" value="click me">
+</body>
+</html>
