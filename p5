@@ -1,0 +1,24 @@
+<html>
+<head>
+<title>Try jQuery Online</title>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+$(document).ready(function (){
+  $('#div2 .small1').css("border"," 5px solid red");
+});
+    
+
+
+</script>
+<div id="div1">
+    <span class =small> div1 span </span>
+</div>
+<br/>
+<div id="div2">
+    <span class="small"> div2 span1 </span>
+    
+    <span class="small1"> div2 span2 </span>
+</div>
+
+</body>
+</html>
