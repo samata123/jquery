@@ -1,0 +1,25 @@
+<html>
+<head>
+<title>Try jQuery Online</title>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+$(document).ready(function (){
+   $('table th ').each(function(){
+      alert ($(this).html());
+   })
+
+});
+    
+
+
+</script>
+<table border=1>
+    <th> new</th>
+     <th> new1</th>
+      <th> new2</th>
+    <tbody>
+        <td>1</td>
+    </tbody>
+    </table>
+</body>
+</html>
