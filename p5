@@ -1,3 +1,7 @@
+important note: filter is used to except that ,applay to rest
+$('.div').filter(.big).css('border','5px solid red')
+
+
 <html>
 <head>
 <title>Try jQuery Online</title>
