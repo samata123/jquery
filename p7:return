@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>Try jQuery Online</title>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+$(document).ready( function(){
+    $('[title]').filter(function(){
+      return $(this).attr('title').toLowerCase()=="div1title" ; 
+    }).css('border', '3px solid red');
+});  
+
+
+</script>
+<div title="div1Title" style="color:red">
+    <span class =small> div1 span </span>
+</div>
+<br/>
+<div title="div2">
+    <span class="small"> div2 span1 </span>
+    
+    <span class="small1"> div2 span2 </span>
+</div>
+<br/>
+ <span title="div"> div2 span1 </span>
+ <br/>
+  <span title="div1title"> div2 span1 </span>
+</body>
+</html>
