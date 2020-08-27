@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Try jQuery Online</title>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+$(document).ready( function(){
+ $('#submit').click(function (){
+   var result=$('input[type="checkbox"]:checked') ;
+      if(result.length>0){
+       var resultstring=result.length +"number of checkboxes checked <br/>";
+     
+       result.each(function(){
+          resultstring +=$(this).val()+"<br/>";
+       });
+       $('#result').html(resultstring);
+   }
+   else{
+       $('#result').html("is  not checked");
+   }
+ });
+   
+});
+
+
+</script>
+
+skills:
+<input type="checkbox" name="skills"  value="javascript" /> javascript
+<input type="checkbox" name="skills" value="c#" />c#
+<input type="checkbox" name="skills" value=".net" />.net
+<input type="checkbox" name="skills" value="java" />java
+<input type="checkbox" name="skills" value="c" />c
+<br/><br/>
+<div id="result">
+    
+</div>
+
+<input id=submit type="submit" value ="submit"/>
+</body>
+</html>
