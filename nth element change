@@ -1,0 +1,5 @@
+$document.ready(function (){
+$('p:n-child(3)'.css('background-color','red');
+});
+
+check https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_sel_nthchild
