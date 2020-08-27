@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Try jQuery Online</title>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    
+    $('#submit').click(function(){
+        
+      
+   var result=$('input[name="skills"]:checked');
+ 
+     if(result.length>0){
+        var resultstring=result.length + " number of checked boxes <br/>";
+       //alert(resultstring);
+         result.each(function(){
+            selectedvalue=$(this).val();
+           
+             resultstring +=selectedvalue + "-"+ $('label[for="cq-'+selectedvalue+'"]').text() + "<br/>";
+             
+             
+         });
+     $('#result').html(resultstring);
+     }
+     else{
+         $('#result').html('no check boxes checked');
+     }
+    
+});
+});
+
+
+  
+
+
+</script>
+
+skills:
+<input type="checkbox" name="skills"  value="js" /> 
+<label for='cq-js' > javscript</label>
+<input type="checkbox" name="skills" value="cs" />
+<label for='cq-cs' > c#</label>
+<input type="checkbox" name="skills" value="net" />
+<label for='cq-net' >.net</label>
+<input type="checkbox" name="skills" value="ja" />
+<label for='cq-ja' >java</label>
+<input type="checkbox" name="skills" value="c" />
+<label for='cq-c' >c</label>
+<br/><br/>
+
+<div id="result">
+    
+</div>
+
+<input id=submit type="submit" value ="submitskills"/>
+
+</body>
+</html>
