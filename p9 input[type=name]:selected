@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Try jQuery Online</title>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $('#submit').click(function(){  
+    naya('skills');
+});
+$('#submit1').click(function(){
+     naya('cities');
+});
+
+var naya=function(groupname){
+var result=$('input[name="'+groupname+'"]:checked');
+   
+    if(result.length>0){
+        var resultstring=result.length +" number of checked boxes <br/>";
+       
+        result.each(function(){
+            resultstring +=$(this).val() + "<br/>";
+             
+        });
+          $('#result').html(resultstring);
+    }
+    else{
+        $('#result').html('no check boxes checked');
+    }
+    }
+});   
+
+
+</script>
+
+skills:
+<input type="checkbox" name="skills"  value="javascript" /> javascript
+<input type="checkbox" name="skills" value="c#" />c#
+<input type="checkbox" name="skills" value=".net" />.net
+<input type="checkbox" name="skills" value="java" />java
+<input type="checkbox" name="skills" value="c" />c
+<br/><br/>
+skills:
+<input type="checkbox" name="cities"  value="india" /> india
+<input type="checkbox" name="cities" value="dubai" />dubai
+<input type="checkbox" name="cities" value="pakistan" />pakistan
+<input type="checkbox" name="cities" value="dhelhi" />dhelhi
+<input type="checkbox" name="cities" value="mumbai" />mumbai
+<br/><br/>
+<div id="result">
+    
+</div>
+
+<input id=submit type="submit" value ="submitskills"/>
+<input id=submit1 type="submit" value ="submitcities"/>
+</body>
+</html>
