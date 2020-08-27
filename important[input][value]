@@ -1,0 +1,11 @@
+$(document).ready(function(){
+$('#submit').click(function(){
+var result=$('input[type="radio"]:checked'); 
+if(result.length > 0){
+$('#result').html(result.val()+" checked")
+}
+else{
+$('#result').html("not checked");
+}
+});
+});
