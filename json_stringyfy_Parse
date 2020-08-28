@@ -1,0 +1,59 @@
+JSONStringyfy converts json object or json array to json string.
+JSONParse converts json string to json object.
+example:jsonstringyfy
+<!DOCTYPE html>
+<html>
+<head>
+<title>Try jQuery Online</title>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+ $(document).ready(function () {
+           var emplyoeeJson={
+               "FirstName":"samata",
+               "LastName":"huddar",
+               "Gender":"male",
+               "Salary":"5000"
+           }
+           var strings=JSON.stringify(emplyoeeJson);
+             $('#divResult1').html(strings);
+        });
+</script>
+
+
+    <div id="divResult"></div>
+
+  <div id="divResult1"></div>
+
+</body>
+</html>
+example 2:
+<!DOCTYPE html>
+<html>
+<head>
+<title>Try jQuery Online</title>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+ $(document).ready(function () {
+           var str='[{"FirstName":"samata","LastName":"huddar","Gender":"male","Salary":"5000"},{"FirstName":"shruti","LastName":"kulkarni","Gender":"male","Salary":"5000"}]';
+           var json=JSON.parse(str);
+          
+           var newstring="";
+           $.each(json,function(i,item){
+               newstring+='FirstName='+item.FirstName+'<br/>';
+               newstring+='LastName='+item.LastName+'<br/>';
+               newstring+='Gender='+item.Gender+'<br/>';
+               newstring+='Salary='+item.Salary+'<br/>';
+               
+               
+           });
+           $('#divResult').html(newstring);
+ });
+</script>
+
+
+    <div id="divResult"></div>
+
+  <div id="divResult1"></div>
+
+</body>
+</html>
