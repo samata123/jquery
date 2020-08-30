@@ -1,0 +1,27 @@
+1.attr
+2.wrap
+3.wrap all
+4.unwrap
+5.wrap inner
+<!DOCTYPE html>
+<html>
+<head>
+<title>Try jQuery Online</title>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $('div').each(function(){
+       alert($(this).attr('title'));
+    });
+});
+ 
+</script>
+
+
+    <div id="divResult" title='sam'>
+    DIV1
+</div>
+  <div id="divResult1" title='sak'> DIV2</div>
+
+</body>
+</html>
