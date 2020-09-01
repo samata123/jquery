@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Try jQuery Online</title>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  alert(  $('li').map(function(index,element){
+        return $(element).text();
+    }).get());
+});
+ 
+</script>
+
+    <ul>
+        <li>us </li>
+         <li>india</li>
+          <li>UK</li>
+            <li>CANNADA</li>
+            <li>AUSTRALIA</li>
+    </ul>
+
+
+    <div id="divResult" title='sam'>
+    DIV1
+</div>
+  <div id="divResult1" title='sak'> DIV2</div>
+
+</body>
+</html>
